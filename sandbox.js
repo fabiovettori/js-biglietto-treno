@@ -25,8 +25,8 @@ console.log(journeyPriceFixed);
 
 // output
 if (isNaN(customerAge) || isNaN(distance)) {
+    document.getElementsByClassName('output')[0].style.display = 'none';
     document.getElementById('warnings').innerHTML = 'Invalid entries. Please refresh the page.';
 } else {
-    document.getElementById('customer-name').innerHTML = 'Hi ' + customerName;
-    document.getElementById('ticket-price').innerHTML = 'the price of your journey is: ' +  journeyPriceFixed + '€';
+    document.getElementById('ticket-price').innerHTML = journeyPriceFixed;
 }
